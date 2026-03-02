@@ -1,5 +1,17 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+.poker-card {
+   font-family: 'Georgia', serif;
+    overflow: hidden;
+    width: 350px; 
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.suit{
+    font-size: 80px;
+    line-height: 1;
 }
