@@ -37,4 +37,23 @@ const renderCard = (value, suit) => {
 
   const changeCardTenS = setInterval (generateRandomCard, 10000);
 
+  const changeCardSize = () => {
+    const card = document.querySelector("#myCard");
+    const width = document.querySelector("#width-input").value;
+    const height = document.querySelector("#height-input").value;
+    if (width){
+      card.style.width = width + "px";
+    };
+
+    if (height){
+      card.style.height = height + "px";
+    };
+  };
+
+  const widthInput = document.querySelector("#width-input");
+  widthInput.addEventListener("input", changeCardSize)
+  const heightInput = document.querySelector("#height-input");
+  heightInput.addEventListener("input", changeCardSize);
+
+
 };
