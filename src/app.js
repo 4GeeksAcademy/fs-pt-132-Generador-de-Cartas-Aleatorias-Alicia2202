@@ -32,4 +32,7 @@ const renderCard = (value, suit) => {
     bottomSuit.style.color = "black";
   }
 
+  const newCardBtn = document.querySelector("#new-card-btn");
+  newCardBtn.addEventListener("click", generateRandomCard);
+
 };
