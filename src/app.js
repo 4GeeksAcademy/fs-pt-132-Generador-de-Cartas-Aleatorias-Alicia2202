@@ -35,4 +35,6 @@ const renderCard = (value, suit) => {
   const newCardBtn = document.querySelector("#new-card-btn");
   newCardBtn.addEventListener("click", generateRandomCard);
 
+  const changeCardTenS = setInterval (generateRandomCard, 10000);
+
 };
