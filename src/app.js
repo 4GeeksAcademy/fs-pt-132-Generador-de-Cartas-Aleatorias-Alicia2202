@@ -1,6 +1,9 @@
 window.onload = function () {
   generateRandomCard();
 };
+  const card = document.querySelector("#myCard");
+  const initialWidth = card.offsetWidth;
+  const initialHeight = card.offsetHeight;
 
 const generateRandomCard = () => {
   const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K"];
@@ -32,28 +35,43 @@ const renderCard = (value, suit) => {
     bottomSuit.style.color = "black";
   }
 
+
   const newCardBtn = document.querySelector("#new-card-btn");
   newCardBtn.addEventListener("click", generateRandomCard);
 
-  const changeCardTenS = setInterval (generateRandomCard, 10000);
+  const changeCardTenS = setInterval(generateRandomCard, 10000);
 
   const changeCardSize = () => {
     const card = document.querySelector("#myCard");
     const width = document.querySelector("#width-input").value;
     const height = document.querySelector("#height-input").value;
-    if (width){
+    if (width) {
       card.style.width = width + "px";
     };
 
-    if (height){
+    if (height) {
       card.style.height = height + "px";
     };
   };
-
   const widthInput = document.querySelector("#width-input");
   widthInput.addEventListener("input", changeCardSize)
   const heightInput = document.querySelector("#height-input");
   heightInput.addEventListener("input", changeCardSize);
+
+  const resetCardSize = () => {
+    const card = document.querySelector("#myCard");
+    const widthInput = document.querySelector("#width-input");
+    const heightInput = document.querySelector("#height-input");
+
+    card.style.width = initialWidth + "px";
+    card.style.height = initialHeight + "px";
+
+    widthInput.value = "";
+    heightInput.value = "";
+  };
+  const resetBtn = document.querySelector("#reset-btn");
+  resetBtn.addEventListener("click", resetCardSize);
+
 
 
 };

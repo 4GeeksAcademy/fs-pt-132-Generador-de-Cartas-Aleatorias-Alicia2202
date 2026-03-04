@@ -16,6 +16,8 @@
     line-height: 1;
 }
 
-#new-card-btn{
-    background-color:#d3d3d3;
+#new-card-btn,
+#reset-btn{
+     background-color:#d3d3d3;
 }
+
